@@ -1,0 +1,41 @@
+syntax = "proto2";
+
+message glossary{
+
+message GLOSSARY {
+required string title = 1;
+
+    message GLOSSDIV {
+required string title = 1;
+
+    message GLOSSLIST {
+
+message GLOSSENTRY {
+required string ID = 1;
+    required string SortAs = 2;
+required string GlossTerm = 3;
+    required string Acronym = 4;
+required double Year = 5;
+    required double Price = 6;
+required string Abbrev = 7;
+
+    message GLOSSDEF {
+required string para = 1;
+    repeated string GlossSeeAlso = 2;
+    }
+
+required GLOSSDEF GlossDef = 8;
+    required string GlossSee = 9;
+    }
+
+required GLOSSENTRY GlossEntry = 1;
+    }
+
+required GLOSSLIST GlossList = 2;
+    }
+
+required GLOSSDIV GlossDiv = 2;
+    }
+
+required GLOSSARY glossary = 1;
+    }

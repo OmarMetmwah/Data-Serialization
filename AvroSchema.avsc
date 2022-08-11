@@ -1,0 +1,103 @@
+{
+  "name": "MyClass",
+  "type": "record",
+  "namespace": "test",
+  "fields": [
+    {
+      "name": "glossary",
+      "type": {
+        "name": "glossary",
+        "type": "record",
+        "fields": [
+          {
+            "name": "title",
+            "type": "string"
+          },
+          {
+            "name": "GlossDiv",
+            "type": {
+              "name": "GlossDiv",
+              "type": "record",
+              "fields": [
+                {
+                  "name": "title",
+                  "type": "string"
+                },
+                {
+                  "name": "GlossList",
+                  "type": {
+                    "name": "GlossList",
+                    "type": "record",
+                    "fields": [
+                      {
+                        "name": "GlossEntry",
+                        "type": {
+                          "name": "GlossEntry",
+                          "type": "record",
+                          "fields": [
+                            {
+                              "name": "ID",
+                              "type": "string"
+                            },
+                            {
+                              "name": "SortAs",
+                              "type": "string"
+                            },
+                            {
+                              "name": "GlossTerm",
+                              "type": "string"
+                            },
+                            {
+                              "name": "Acronym",
+                              "type": "string"
+                            },
+                            {
+                              "name": "Year",
+                              "type": "int"
+                            },
+                            {
+                              "name": "Price",
+                              "type": "float"
+                            },
+                            {
+                              "name": "Abbrev",
+                              "type": "string"
+                            },
+                            {
+                              "name": "GlossDef",
+                              "type": {
+                                "name": "GlossDef",
+                                "type": "record",
+                                "fields": [
+                                  {
+                                    "name": "para",
+                                    "type": "string"
+                                  },
+                                  {
+                                    "name": "GlossSeeAlso",
+                                    "type": {
+                                      "type": "array",
+                                      "items": "string"
+                                    }
+                                  }
+                                ]
+                              }
+                            },
+                            {
+                              "name": "GlossSee",
+                              "type": "string"
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    }
+  ]
+}
